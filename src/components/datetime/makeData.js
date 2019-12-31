@@ -67,8 +67,57 @@ function getDays (startDate, endDate, year, month) {
   }
 }
 
+function getHours(startDate, endDate, year, month, day) {
+  const startYear = startDate.getFullYear()
+  const endYear = endDate.getFullYear()
+  const startMonth = startDate.getMonth() + 1
+  const endMonth = endDate.getMonth() + 1
+  const startDay = startDate.getDate()
+  const endDay = endDate.getDate()
+  const startHour = startDate.getHours()
+  const endHour = endDate.getHours()
+  let start = 1
+  let end = 59
+  if(year === startYear && month === startMonth && day === startDay) {
+    start = startHour
+  }
+  if(year === endYear && month === endMonth && day === endDay){
+    end = endHour
+  }
+  return {
+    minHour: start,
+    maxHour: end
+  }
+}
+
+function getMinute(startDate, endDate, year, month, day, hour){
+  const startYear = startDate.getFullYear()
+  const endYear = endDate.getFullYear()
+  const startMonth = startDate.getMonth() + 1
+  const endMonth = endDate.getMonth() + 1
+  const startDay = startDate.getDate()
+  const endDay = endDate.getDate()
+  const startHour = startDate.getHours()
+  const endHour = endDate.getHours()
+  const startMinute= startDate.getMinutes()
+  const endMinute = endDate.getMinutes()
+  let start = 1
+  let end = 59
+  if(year === startYear && month === startMonth && day === startDay && hour === startHour) {
+    start = startMinute
+  }
+  if(year === endYear && month === endMonth && day === endDay && hour === endHour){
+    end = endMinute
+  }
+  return {
+    minMinute: start,
+    maxMinute: end
+  }
+}
 export {
   getYears,
   getMonths,
-  getDays
+  getDays,
+  getHours,
+  getMinute
 }

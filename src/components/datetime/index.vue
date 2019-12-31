@@ -145,6 +145,7 @@ export default {
     show: Boolean,
     defaultSelectedValue: String,
     computeHoursFunction: Function,
+    computeMinutesFunction: Function,
     computeDaysFunction: Function,
     orderMap: Object
   },
@@ -209,6 +210,7 @@ export default {
         minuteList: this.minuteList,
         defaultSelectedValue: this.defaultSelectedValue,
         computeHoursFunction: this.computeHoursFunction,
+        computeMinutesFunction: this.computeMinutesFunction,
         computeDaysFunction: this.computeDaysFunction,
         orderMap: this.orderMap || {},
         onSelect (type, val, wholeValue) {

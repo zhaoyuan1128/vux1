@@ -1,5 +1,5 @@
 {
-  "name": "vux",
+  "name": "vux-bake",
   "version": "2.9.4",
   "main": "index.js",
   "description": "Mobile web UI based on Vue and WeUI",
@@ -16,10 +16,10 @@
     "framework",
     "frontend"
   ],
-  "author": "airyland <airyland@qq.com>",
+  "author": "zhaoyuan",
   "repository": {
     "type": "git",
-    "url": "https://github.com/airyland/vux"
+    "url": "git@github.com:zhaoyuan1128/vux1.git"
   },
   "license": "MIT",
   "scripts": {
